@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "wagtail.search",
     "wagtail.admin",
     "wagtail",
+    'wagtail.api.v2', # Added for Wagtail API
     # Other
     "modelcluster",
     "taggit",
