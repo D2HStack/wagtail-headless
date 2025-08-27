@@ -1,0 +1,40 @@
+# Python
+__pycache__
+*.pyc
+.python-version
+
+# JS
+node_modules/
+/npm-debug.log
+
+# System
+.DS_Store
+*.swp
+*~
+
+# Environment
+.env
+/venv/
+/.venv/
+/tmp/
+
+# Database
+*.sqlite3
+
+# Static folder
+/static/
+
+# Vagrant
+/.vagrant/
+/Vagrantfile.local
+
+# VS Code
+.vscode
+
+# Other
+/.idea/
+coverage
+.vim
+Makefile
+tree.md
+requirements-dev.txt
