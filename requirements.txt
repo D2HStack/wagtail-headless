@@ -1,2 +1,9 @@
-Django>=5.1,<5.2
+# Django
+django>=5.1,<5.2
+
+# Wagtail
 wagtail>=6.4,<6.5
+
+# Database
+pymysql
+cryptography
