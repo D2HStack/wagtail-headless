@@ -1,6 +1,7 @@
 # Django
 django>=5.1,<5.2
 djangorestframework
+django-cors-headers
 
 # Wagtail
 wagtail>=6.4,<6.5

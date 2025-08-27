@@ -21,10 +21,17 @@ pymysql.install_as_MySQLdb()
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
+# Added
 if "SECRET_KEY" in os.environ:
     SECRET_KEY = os.environ["SECRET_KEY"]
-    
+
+# Added
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
+
+# Added
+CORS_ORIGIN_WHITELIST = [
+     'http://localhost:3000',  # The default port for create-react-app
+]
 
 
 # Quick-start development settings - unsuitable for production
@@ -35,6 +42,8 @@ ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
 
 INSTALLED_APPS = [
     # User
+    "utils",
+    # "blog",
     "home",
     "search",
     # Wagtail
@@ -61,6 +70,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework", # Added for serialization
+    "corsheaders", # Added for CORS
 ]
 
 MIDDLEWARE = [
@@ -72,6 +82,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "wagtail.contrib.redirects.middleware.RedirectMiddleware",
+    "corsheaders.middleware.CorsMiddleware", # Added for CORS
 ]
 
 ROOT_URLCONF = "mysite.urls"
